@@ -1,7 +1,7 @@
 extends: base/asana/integrations.yaml
 unique_key: test_asana
 docs: https://docs.composio.dev/docs/asana
-name: Test_Asana
+name: test_asana
 description: Tool to help teams organize, track, and manage their work.
 logo: https://raw.githubusercontent.com/SamparkAI/open-logos/master/asana.png
 categories: [productivity, ticketing]
