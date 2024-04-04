@@ -1,0 +1,32 @@
+extends: base/asana/integrations.yaml
+unique_key: test_asana
+docs: https://docs.composio.dev/docs/asana
+name: Test_Asana
+description: Tool to help teams organize, track, and manage their work.
+logo: https://raw.githubusercontent.com/SamparkAI/open-logos/master/asana.png
+categories: [productivity, ticketing]
+
+auth_schemes:
+  - scheme_name: asana_oauth
+    auth_mode: OAUTH2
+    # client_id, client_secret will be provided upon request.
+    # Default parameters and fields are determined based on auth_mode
+    authorization_url: "https://app.asana.com/-/oauth_authorize"
+    token_url: "https://app.asana.com/-/oauth_token"
+    default_scopes: []
+    token_response_metadata: [access_token, token_type, scope, expires_in, refresh_token]
+    token_params:
+        grant_type: authorization_code
+    proxy:
+      base_url: "{{base_url}}"
+
+    authorization_params:
+        response_type: code
+
+    fields:
+      - name: base_url
+        displayName: Base URL
+        description: "The base URL for asana API requests. For more information, visit https://developers.asana.com/reference/rest-api-reference"
+        type: string
+        default: https://app.asana.com
+
