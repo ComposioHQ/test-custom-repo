@@ -106,7 +106,7 @@ class GetSubtasks(Action):
 # ... (Implement other actions like Add Task Comment, etc.)
 
 
-class Asana(Tool):
+class Test_Asana(Tool):
     """
     Connect to Asana to manage tasks, projects, subtasks, and more.
     """
